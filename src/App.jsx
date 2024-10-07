@@ -1,23 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-import Counter from './Component/Counter';
+import { Provider } from 'react-redux'
+import store from './store'
+
+import Counter from './Component/Counter'
 
 function App() {
-   const [count, setCount] = useState(0)
-   const Incrementcount=()=>{
-    setCount(count+1)
-    
-   }
-   const Decrementcount=()=>{
-    setCount(count-1)
-   }
+  // const [count, setcount] = useState(2);     //hooks in react(useState is the hook here)- to hold or support the variables  setCount-setmanagers
+
   return (
     <>
-    <Counter/>
+    
 
+        <Provider store={store}>
+        <Counter/>
+        </Provider>
     </>
   )
 }

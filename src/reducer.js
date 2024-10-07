@@ -5,4 +5,5 @@ const counterReducer=(state=0,action)=>{
               case DECREMENT: return state-1                          
                default:state
         }
-}
+};
+export default counterReducer
